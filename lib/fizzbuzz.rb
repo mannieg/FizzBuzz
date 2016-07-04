@@ -9,5 +9,3 @@ def fizz_buzz(num)
     return num
   end
 end
-
-puts fizz_buzz(15)

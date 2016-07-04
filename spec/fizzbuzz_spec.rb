@@ -1,8 +1,10 @@
-require "fizzbuzz"
+require "./lib/fizzbuzz"
 
 describe "fizzbuzz" do
-  it "return FizzBuzz for the number 15" do
-    expect(fizz_buzz(15)).to eq("FizzBuzz")
+  fizzbuzz_hash = {1 => 1, 3 => "Buzz", 5 => "Fizz"}
+  fizzbuzz_hash.each do |k, v|
+    it "#{k} should equal #{v}" do
+      expect(fizz_buzz(k)).to eq(v)
+    end
   end
-
 end
