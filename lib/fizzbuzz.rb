@@ -1,11 +1,6 @@
 def fizz_buzz(num)
-  if num % 5 == 0 && num % 3 == 0
-    return "FizzBuzz"
-  elsif num % 5 == 0
-    return "Fizz"
-  elsif num % 3 == 0
-    return "Buzz"
-  else
-    return num
-  end
+  str = ''
+  str += 'Fizz' if (num % 5).zero?
+  str += 'Buzz' if (num % 3).zero?
+  str.empty? ? num : str
 end
